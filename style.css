@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    height: 100vh;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: wheat;
+    /* box-shadow: 0px 1px 10px 1px #000000d1; */
+    gap: 1rem;
+}
+
+header .btn-start {
+    width: fit-content;
+}
+
+main {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat center url(https://images.pexels.com/photos/7061067/pexels-photo-7061067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
+    background-size: cover;
+    box-shadow: 0px 1px 10px 1px #000000d1;
+    position: relative;
+    z-index: 10;
+}
+
+.main-container {
+    padding: 4rem 6rem;
+    background-color: rgba(255, 255, 255, 0.284);
+    backdrop-filter: blur(7px);
+    border: 1px solid #000000;
+    border-radius: 2rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.main-container input[type=number] {
+    padding: 0.4rem;
+    border-radius: 5px;
+    border: 1px solid rgb(109, 109, 109);
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.btn-container {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn {
+    padding: 0.8rem;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 50%;
+    background-color: #93ff93;
+    border: 1px solid rgb(101, 101, 101);
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    background-color: #5aff5a;
+    transform: scale(1.09);
+}
+
+#clear-btn {
+    background-color: rgb(232, 255, 244);
+}
+
+#clear-btn:hover {
+    background-color: rgb(174, 255, 216);
+}
+
+.length-container, .breadth-container {
+    text-align: left;
+}
+
+#result {
+    font-size: 1.5rem;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.5rem 0.7rem;
+    font-weight: 600;
+}
+
+.main-container .all-results-btn {
+    width: 95%;
+    background: rgb(228, 204, 255);
+}
+
+.all-results-btn:hover {
+    transform: scale(1.03);
+    background: rgb(217, 183, 255);
+}
+
+.all-results {
+    margin: 5rem 0;
+    border-radius: 1rem;
+    word-spacing: 0.9rem;
+}
+
+footer {
+    background: no-repeat center url(https://th.bing.com/th/id/OIG.UYD9uYB.mH49suIK71xK?pid=ImgGn);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    background-color: rgba(255, 255, 255, 0.166);
+    backdrop-filter: blur(10px);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    color: white;
+    border: 1px solid rgb(109, 109, 109);
+
+}
+
+footer h1 {
+    font-size: 3rem;
+    text-shadow: 4px 4px 3px rgba(42, 42, 42, 0.822);
+}
+
+@media screen and (max-width: 1050px) {
+    header {
+        font-size: 1.7rem;
+    }
+
+    header .btn-start {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .main-container {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        font-size: 1.3rem;
+    }
+
+    header .btn-start {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        padding: 3rem 1rem;
+        font-size: 1.15rem;
+    }
+
+    .all-results {
+        padding: 3rem 4rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .footer-container {
+        padding: 3rem 1rem;
+    }
+
+    footer h1 {
+        font-size: 2rem;
+    }
+
+}
