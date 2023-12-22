@@ -27,12 +27,9 @@ submitBtn.addEventListener("click", () => {
         sessionStorage.setItem("breadthValues", JSON.stringify(breadthValues));
     }
 
-    // if (breadth.value !== "") {
-    // }
-
 
     let resultsArray = JSON.parse(sessionStorage.getItem("resultHistory")) || [];
-    if (resultVal !== "0.00 ft") {
+    if (resultVal !== "0 ft") {
         resultsArray.push(resultVal);
         sessionStorage.setItem("resultHistory", JSON.stringify(resultsArray));
     }
