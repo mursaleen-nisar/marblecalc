@@ -13,23 +13,29 @@ submitBtn.addEventListener("click", () => {
     let breadthVal = breadth.value;
 
     const longResult = lengthVal * breadthVal / 144;
-    const shortResult = longResult.toFixed(2);
+    const shortResult = Math.floor(longResult * 100) / 100;
     result.innerHTML = shortResult + ' ft';
     // Store and show result on another page
     const resultVal = result.innerHTML;
 
     const lengthValues = JSON.parse(sessionStorage.getItem("lengthValues")) || [];
-    lengthValues.push(lengthVal);
-    sessionStorage.setItem("lengthValues", JSON.stringify(lengthValues));
-
     const breadthValues = JSON.parse(sessionStorage.getItem("breadthValues")) || [];
-    breadthValues.push(breadthVal);
-    sessionStorage.setItem("breadthValues", JSON.stringify(breadthValues));
+    if (length.value !== "" && breadth.value !== "") {
+        lengthValues.push(lengthVal);
+        sessionStorage.setItem("lengthValues", JSON.stringify(lengthValues));
+        breadthValues.push(breadthVal);
+        sessionStorage.setItem("breadthValues", JSON.stringify(breadthValues));
+    }
+
+    // if (breadth.value !== "") {
+    // }
 
 
     let resultsArray = JSON.parse(sessionStorage.getItem("resultHistory")) || [];
-    resultsArray.push(resultVal);
-    sessionStorage.setItem("resultHistory", JSON.stringify(resultsArray));
+    if (resultVal !== "0.00 ft") {
+        resultsArray.push(resultVal);
+        sessionStorage.setItem("resultHistory", JSON.stringify(resultsArray));
+    }
 });
 
 clearBtn.addEventListener("click", () => {

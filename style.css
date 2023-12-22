@@ -85,6 +85,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0 auto;
     cursor: pointer;
     width: 50%;
+    color: black;
     background-color: #93ff93;
     border: 1px solid rgb(101, 101, 101);
     border-radius: 0.5rem;
@@ -103,6 +104,24 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #clear-btn:hover {
     background-color: rgb(174, 255, 216);
+}
+
+.total-btn {
+    background: rgb(98, 233, 98);
+    border-radius: 2rem;
+}
+
+.total-btn:hover {
+    background: rgb(50, 219, 50);
+}
+
+.clear-all-btn {
+    background: rgb(255, 139, 139);
+    border-radius: 2rem;
+}
+
+.clear-all-btn:hover {
+    background: rgb(255, 91, 91);
 }
 
 .length-container, .breadth-container {
@@ -126,10 +145,13 @@ input[type="number"]::-webkit-inner-spin-button {
     background: rgb(217, 183, 255);
 }
 
+.all-results-main {
+    min-width: 32%;
+    padding: 4rem;
+}
+
 .all-results {
-    margin: 5rem 0;
-    border-radius: 1rem;
-    word-spacing: 0.9rem;
+    word-spacing: 0.5rem;
 }
 
 footer {
@@ -167,6 +189,7 @@ footer h1 {
     }
 
     .main-container {
+        padding: 3rem 2rem;
         font-size: 1.5rem;
     }
 
@@ -188,6 +211,10 @@ footer h1 {
     .main-container {
         padding: 3rem 1rem;
         font-size: 1.15rem;
+    }
+
+    .all-results-main {
+        min-width: 90%;
     }
 
     .all-results {
