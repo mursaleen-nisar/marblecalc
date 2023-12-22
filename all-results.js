@@ -36,4 +36,6 @@ clearAllBtn.addEventListener("click", () => {
 
   const resultParas = document.querySelectorAll(".result-para");
   resultParas.forEach(paragraph => paragraph.innerHTML = "");
+
+  totalPara.innerHTML = "Total...";
 });
